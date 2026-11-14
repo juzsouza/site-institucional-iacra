@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b3348">
+  <meta name="description" content="Instituto de Arte Cristã Raphael Augusto em Presidente Prudente. Educação musical com excelência, fé e propósito. Aulas de canto, preparação vocal e instrumentos para diferentes idades e níveis.">
+  <title>Instituto de Arte Cristã Raphael Augusto</title>
+  <style>
+    :root { --navy:#092d42; --deep:#071e2e; --blue:#0d688d; --blue2:#1597c1; --sky:#d6f1f9; --ink:#193344; --muted:#627986; --paper:#fff; --soft:#f2f8fa; --border:#d9e6eb; --shadow:0 25px 60px rgba(5,42,62,.10); }
+    * { box-sizing:border-box; }
+    html {scroll-behavior:smooth;scroll-padding-top:96px}
+    body {margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased}
+    a {color:inherit;text-decoration:none} button {font:inherit;cursor:pointer}
+    .container {max-width:1190px;margin:0 auto;padding:0 26px}
+    .preview-strip {background:#0d3345;color:#d4eff5;text-align:center;font-size:11px;font-weight:700;letter-spacing:.12em;padding:8px 16px}
+    .site-header {position:sticky;top:0;z-index:20;background:rgba(255,255,255,.98);border-bottom:1px solid #e7eff1;backdrop-filter:blur(18px)}
+    .header-inner {height:92px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+    .brand {display:flex;align-items:center;flex:0 0 auto}
+    .brand img {width:225px;height:auto;display:block}
+    .nav {display:flex;align-items:center;gap:28px}
+    .nav a {font-size:13px;font-weight:650;color:#315164;transition:color .2s}
+    .nav a:hover {color:var(--blue2)}
+    .nav .nav-login {background:var(--navy);color:white;padding:13px 18px;border-radius:8px;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
+    .nav .nav-login:hover {color:white;background:#15546f}
+    .hamb {display:none;border:1px solid var(--border);background:white;border-radius:8px;padding:11px}
+    .hamb svg {display:block}
+    .hero {background:radial-gradient(circle at 84% 40%,rgba(35,158,194,.22),transparent 35%),linear-gradient(116deg,#082a40 0%,#0a3d55 58%,#0e4e65 100%);color:white;position:relative;overflow:hidden}
+    .hero:before {content:"";position:absolute;right:-130px;bottom:-330px;width:700px;height:700px;border:1px solid rgba(158,230,248,.18);border-radius:50%;box-shadow:0 0 0 75px rgba(171,235,247,.025),0 0 0 155px rgba(171,235,247,.018)}
+    .hero-inner {min-height:560px;display:grid;grid-template-columns:1.11fr .89fr;align-items:center;gap:40px;padding-top:65px;padding-bottom:85px;position:relative;z-index:1}
+    .eyebrow {display:inline-flex;align-items:center;gap:10px;color:#bceafa;font-size:11px;letter-spacing:.19em;text-transform:uppercase;font-weight:750}
+    .eyebrow:before {content:"";display:block;width:29px;height:2px;background:#55c2e5}
+    h1 {font-size:clamp(39px,4.55vw,62px);line-height:1.11;letter-spacing:-.038em;font-weight:730;max-width:650px;margin:23px 0 23px}
+    h1 em {font-style:normal;color:#7ad8f3}
+    .hero-copy {font-size:17px;line-height:1.75;color:#d4e7ef;max-width:525px;margin-bottom:32px}
+    .buttons {display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+    .btn {padding:16px 22px;font-size:13px;font-weight:750;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:11px;transition:transform .2s,background .2s;white-space:nowrap}
+    .btn:hover {transform:translateY(-2px)}
+    .btn-primary {background:#b4eafa;color:#073a50}.btn-primary:hover{background:#d5f4fd}
+    .btn-outline {border:1px solid rgba(209,236,243,.56);background:transparent;color:white}.btn-outline:hover{background:rgba(255,255,255,.08)}
+    .hero-art {position:relative;min-height:388px;display:flex;justify-content:center;align-items:center}
+    .art-circle {position:absolute;width:385px;height:385px;border-radius:50%;background:radial-gradient(circle,#1484aa77 0%,transparent 69%);filter:blur(4px)}
+    .logo-frame {background:#fff;border-radius:20px;padding:26px 25px;width:min(100%,450px);box-shadow:0 35px 95px rgba(0,15,31,.3);position:relative;z-index:1;transform:rotate(-3deg);border:1px solid #d3ebf1}
+    .logo-frame:after {content:"";position:absolute;inset:9px;border:1px solid #e4f1f5;border-radius:13px;pointer-events:none}
+    .logo-frame img {width:100%;height:auto;display:block}
+    .art-corner {position:absolute;z-index:2;right:0;bottom:17px;background:#0a7e9f;color:white;border:1px solid #51a9c1;border-radius:11px;box-shadow:0 18px 40px #001b2b35;padding:15px 18px;font-size:12px;line-height:1.35}
+    .art-corner strong {display:block;font-size:18px;letter-spacing:.01em}
+    .wave {position:absolute;top:5px;left:-18px;color:#bceafa;opacity:.8;z-index:2}
+    .quick-nav {position:relative;z-index:2;margin-top:-40px}
+    .quick-inner {display:grid;grid-template-columns:repeat(3,1fr);background:white;border:1px solid #d9e9ee;border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+    .quick {display:flex;gap:17px;padding:27px 30px;align-items:center;border-right:1px solid var(--border)}.quick:last-child{border-right:0}
+    .quick-icon {width:49px;height:49px;flex-shrink:0;display:grid;place-items:center;color:#0f769b;border-radius:12px;background:#e9f6f9}
+    .quick strong {display:block;font-size:14px;color:#193b4b;margin-bottom:6px}.quick span {font-size:12px;color:#6b808e;line-height:1.45;display:block}
+    .section {padding:104px 0}
+    .section-head {max-width:660px;margin:0 0 39px}
+    .overline {color:#0c8ab1;font-weight:750;text-transform:uppercase;letter-spacing:.17em;font-size:11px;display:block;margin-bottom:15px}
+    h2 {color:#102f43;font-size:clamp(30px,3.6vw,43px);line-height:1.16;font-weight:740;letter-spacing:-.034em;margin:0 0 19px}
+    .section-head p, .about-copy>p {color:#637b88;font-size:15px;line-height:1.8;margin:0}
+    .filters {display:flex;gap:8px;flex-wrap:wrap;margin:0 0 25px}
+    .filter {background:white;color:#3f6377;border:1px solid #d6e6eb;border-radius:30px;padding:10px 17px;font-size:12px;font-weight:650}
+    .filter.active {background:#0e5672;color:white;border-color:#0e5672}
+    .courses {display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .course {padding:25px 22px;border:1px solid var(--border);border-radius:13px;background:#fff;min-height:218px;transition:box-shadow .2s,transform .2s,border-color .2s}
+    .course:hover {transform:translateY(-3px);box-shadow:0 15px 35px #17486112;border-color:#a7cfdc}
+    .course.hide {display:none}
+    .course .glyph {font-size:31px;line-height:1;color:#0f779b;margin-bottom:17px;font-family:Georgia,serif}
+    .course h3 {font-size:17px;color:#14394c;margin:0 0 10px;letter-spacing:-.01em}.course p{color:#667d8a;font-size:13px;line-height:1.65;margin:0}
+    .about {background:#f4f8fa}
+    .about-grid {display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:74px}
+    .about-graphic {min-height:430px;background:linear-gradient(140deg,#0e5a77,#082e44);border-radius:18px;overflow:hidden;position:relative;padding:42px;display:flex;align-items:flex-end}
+    .about-graphic:after {content:"";position:absolute;right:-100px;top:-110px;width:360px;height:360px;border:1px solid #fff5;border-radius:50%;box-shadow:0 0 0 55px #ffffff10,0 0 0 115px #ffffff0a}
+    .about-graphic .line-art {position:absolute;top:35px;left:30px;width:83%;height:270px;opacity:.48}
+    .about-graphic blockquote {position:relative;z-index:1;color:#fff;margin:0;font-family:Georgia,serif;font-size:29px;line-height:1.33;letter-spacing:-.02em;max-width:390px}
+    .about-graphic blockquote::before {content:"“";font-size:63px;display:block;color:#72d5f1;height:51px}
+    .about-points {display:grid;gap:21px;margin-top:31px}
+    .about-point{display:flex;gap:15px;align-items:flex-start}.point-check{width:30px;height:30px;display:grid;place-items:center;flex:none;background:#dcf0f5;color:#0f799b;border-radius:50%;font-size:15px;font-weight:bold}
+    .about-point b{display:block;font-size:14px;color:#18384b;margin-bottom:4px}.about-point p{font-size:13px;color:#6b8190;line-height:1.55;margin:0}
+    .feature-band {background:#092d42;padding:75px 0;color:#fff}
+    .feature-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:40px}
+    .feature-band h2{color:#fff;font-size:37px}.feature-band p{color:#bed8e5;line-height:1.75;font-size:14px}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{border:1px solid #3a6275;background:#ffffff08;border-radius:12px;padding:24px 18px}
+    .step b{font-family:Georgia,serif;color:#7ad8f3;font-size:30px;display:block;margin-bottom:18px}.step strong{display:block;font-size:13px;margin-bottom:8px}.step span{font-size:12px;line-height:1.55;color:#bed6e1}
+    .contact {padding:94px 0 96px}
+    .contact-box {display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:30px;padding:44px 48px;background:#edf7fa;border:1px solid #d5e8ee;border-radius:17px}
+    .contact-box h2{font-size:35px;margin-bottom:11px}.contact-box p{color:#567383;line-height:1.7;font-size:14px;margin:0}
+    .contact-side {text-align:right}.contact-side .future{font-size:12px;color:#507587;display:block;margin-top:12px}
+    .contact-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+    .contact-card {background:#fff;border:1px solid #dae7ec;border-radius:14px;padding:24px 24px 22px;min-width:0;box-shadow:0 10px 35px #0b36470a;}
+    .contact-card-top {display:flex;align-items:center;gap:12px;margin-bottom:18px}
+    .contact-card-icon {height:44px;width:44px;flex:none;background:#e8f6fa;color:#0b688d;display:grid;place-items:center;border-radius:12px}
+    .contact-card-icon svg {width:23px;height:23px}
+    .contact-card h3 {margin:0;font-size:16px;color:#103a50;letter-spacing:-.015em}
+    .contact-card p {font-size:13px;color:#617d8b;line-height:1.6;min-height:44px;margin:0 0 16px}
+    .contact-card .contact-pending {font-size:12px;font-weight:650;color:#317a92;background:#edf7fa;border:1px solid #d2e8ef;border-radius:8px;display:inline-flex;padding:8px 11px}
+    .contact-note {font-size:12px;color:#68818f;margin:16px 0 0;line-height:1.6}
+    .contact-link {display:inline-flex;align-items:center;justify-content:center;gap:6px;background:#0d6586;color:#fff;text-decoration:none;font-size:13px;font-weight:700;padding:10px 14px;border-radius:9px;transition:background .2s}
+    .contact-link:hover,.contact-link:focus-visible {background:#084e68;color:#fff}
+    .contact-card .contact-value {font-size:15px;font-weight:700;color:#113a50;line-height:1.45;min-height:unset;margin-bottom:8px}
+    .contact-card .contact-details {min-height:unset;margin-bottom:18px}
+    @media(max-width:540px){.contact-grid{grid-template-columns:1fr}.contact-link{width:100%}}
+    .btn-dark {background:#0c5b79;color:white}.btn-dark:hover{background:#0a789b}
+    .faq {padding:0 0 104px}.faq-inner{max-width:780px;margin:auto}
+    .faq h2{text-align:center;font-size:33px;margin-bottom:28px}
+    details {padding:22px 3px;border-bottom:1px solid var(--border)}summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:680;color:#173a4d}
+    summary::-webkit-details-marker{display:none}summary:after{content:'+';font-size:22px;color:#1f7999}details[open] summary:after{content:'−'}details p{font-size:13px;color:#647e8b;line-height:1.75;margin:12px 35px 0 0}
+    .footer {background:#071d2b;color:#c5d6df;padding:51px 0 25px}.footer-grid {display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+    .footer-logo {padding:12px;border-radius:9px;display:inline-block;background:white}.footer-logo img{width:208px;height:auto;display:block}
+    .footer p {font-size:12px;line-height:1.7;color:#a5bfcc;max-width:410px}
+    .footer-links{justify-self:end;display:flex;flex-direction:column;gap:14px;font-size:13px}
+    .footer a:hover{color:white}.copyright a{color:inherit;text-decoration:underline;text-decoration-color:#6c8b9e;text-underline-offset:3px}.copyright{border-top:1px solid #2b4856;margin-top:40px;padding-top:22px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:11px;color:#8ba6b4}
+    .notice {margin-top:28px;color:#77929e;font-size:11px;line-height:1.65}
+    .sr-only {position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    a:focus-visible, button:focus-visible,summary:focus-visible{outline:3px solid #68d4f2;outline-offset:3px}
+    @media(max-width:1050px){.nav{gap:16px}.brand img{width:205px}.courses{grid-template-columns:repeat(2,1fr)}.quick{padding:24px 18px}.about-grid{gap:32px}}
+    @media(max-width:770px){.header-inner{height:77px}.brand img{width:189px}.hamb{display:block}.nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:20px 25px 23px;box-shadow:0 20px 30px #091a2b18;border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;gap:20px}.nav.open{display:flex}.nav .nav-login{justify-content:center}.hero-inner{grid-template-columns:1fr;padding-top:65px;padding-bottom:75px;gap:20px}.hero-art{min-height:315px}.logo-frame{max-width:420px}.quick-inner{grid-template-columns:1fr}.quick{border-right:0;border-bottom:1px solid var(--border)}.quick:last-child{border-bottom:0}.section{padding:76px 0}.about-grid,.feature-grid,.contact-box{grid-template-columns:1fr}.about-graphic{min-height:320px}.steps{grid-template-columns:repeat(3,1fr)}.contact-side{text-align:left}.footer-grid{grid-template-columns:1fr}.footer-links{justify-self:start}.contact-grid{grid-template-columns:1fr}.quick-nav{margin-top:-28px}}
+    @media(max-width:540px){.container{padding:0 19px}.hero-inner{padding-top:54px}.hero h1{font-size:42px}.hero-copy{font-size:15px}.hero-art{min-height:265px}.logo-frame{width:95%;padding:20px}.art-corner{right:-6px;bottom:2px;padding:11px 13px}.art-circle{width:280px;height:280px}.buttons{flex-direction:column;align-items:stretch}.btn{width:100%}.courses{grid-template-columns:1fr}.course{min-height:190px}.steps{grid-template-columns:1fr}.about-graphic{padding:24px}.about-graphic blockquote{font-size:25px}.feature-band{padding:62px 0}.feature-band h2,.contact-box h2{font-size:30px}.contact-box{padding:30px 25px}.footer-logo img{width:185px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+    /* Conteúdo institucional fundamentado nos materiais do IACRA */
+    .vocal-highlight{background:radial-gradient(circle at 85% 10%,#18658a 0%,#0a354c 55%,#092b3d 100%);color:#fff;padding:72px 0;overflow:hidden}
+    .vocal-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}
+    .vocal-highlight h2{color:white;max-width:560px;font-size:clamp(30px,3.3vw,43px)}
+    .vocal-highlight h2 em{font-style:normal;color:#8ce3fa}
+    .vocal-highlight p{max-width:555px;font-size:15px;line-height:1.82;color:#d3e8f1}
+    .vocal-cta{display:inline-flex;margin-top:17px;padding:13px 18px;border:1px solid #7ccde3;border-radius:8px;color:#d5f5fc;font-size:13px;font-weight:650;gap:15px;transition:background .2s}
+    .vocal-cta:hover{background:#ffffff15}
+    .vocal-features{border:1px solid #6597ab66;background:#fff1;border-radius:17px;padding:14px 29px}
+    .vocal-features>div{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid #ffffff23}
+    .vocal-features>div:last-child{border:0}
+    .vocal-no{font-weight:800;font-size:13px;color:#79d5ee;letter-spacing:.12em;padding-top:3px}
+    .vocal-features strong{display:block;font-size:16px;margin-bottom:7px}
+    .vocal-features div div span{font-size:13px;line-height:1.65;color:#bfdae6;display:block}
+    .essence{background:#fff}
+    .essence-intro{max-width:750px;margin-bottom:35px}
+    .essence-intro p{font-size:16px;color:#617b8b;line-height:1.75}
+    .essence-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .essence-card{border-radius:16px;background:#f2f8fa;border:1px solid #d7e9ef;padding:29px 27px 31px;min-height:290px}
+    .essence-kicker{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#0e7aa1;font-weight:750}
+    .essence-card h3{font-size:21px;line-height:1.28;color:#133b51;margin:19px 0 12px;letter-spacing:-.025em}
+    .essence-card p{font-size:14px;color:#617c8b;line-height:1.78;margin:0}
+    .values-card{display:grid;grid-template-columns:240px 1fr;gap:28px;margin-top:20px;padding:29px 34px;border-radius:16px;background:#0a354b;color:#fff;align-items:center}
+    .values-card h3{color:#fff;font-size:23px;margin:0;line-height:1.3}
+    .values-list{list-style:none;display:flex;flex-wrap:wrap;gap:9px;margin:0;padding:0}
+    .values-list li{font-size:12px;line-height:1.4;padding:10px 13px;border-radius:30px;background:#ffffff12;color:#dff0f6;border:1px solid #ffffff2a}
+    @media(max-width:960px){.nav{gap:14px}.nav a{font-size:12px}.vocal-grid{gap:28px}.values-card{grid-template-columns:1fr}}
+    @media(max-width:770px){.vocal-grid{grid-template-columns:1fr}.essence-cards{grid-template-columns:1fr}.essence-card{min-height:0}.values-card{padding:26px}}
+    @media(max-width:540px){.vocal-highlight{padding:63px 0}.vocal-features{padding:10px 19px}.essence-intro p{font-size:14px}.values-card h3{font-size:21px}}
+  </style>
+</head>
+<body>
+<div class="preview-strip">MODELO DE APRESENTAÇÃO · SITE AINDA NÃO PUBLICADO</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#inicio" aria-label="Início - Instituto Raphael Augusto"><img src="assets/logo-iacra.png" alt="Instituto de Arte Cristã Raphael Augusto"></a>
+    <button class="hamb" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false" type="button" id="menu-button"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#194b64" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <nav class="nav" id="menu" aria-label="Menu principal">
+      <a href="#inicio">Início</a><a href="#cursos">Cursos</a><a href="#instituto">O Instituto</a><a href="#essencia">Nossa essência</a><a href="#contato">Contato</a>
+      <a class="nav-login" href="https://institutoiacra.com.br/" target="_blank" rel="noopener noreferrer" title="Acesso restrito à equipe do IACRA">Área da equipe <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Instituto de Arte Cristã</span>
+        <h1>Educação musical com <em>excelência, fé e propósito.</em></h1>
+        <p class="hero-copy">Mais do que ensinar música, buscamos desenvolver talentos e formar pessoas. Aqui, você encontra espaço para aprender no seu ritmo, expressar sua criatividade e fazer da música uma forma de comunhão e propósito.</p>
+        <div class="buttons"><a href="#cursos" class="btn btn-primary">Conheça nossas áreas <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Marca do Instituto Raphael Augusto">
+        <div class="art-circle" aria-hidden="true"></div>
+        <svg class="wave" width="122" height="100" viewBox="0 0 122 100" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" opacity=".56"><path d="M0 52c15-21 30-21 45 0s30 21 45 0 22-19 32-6"/><path d="M0 36c15-21 30-21 45 0s30 21 45 0 22-19 32-6"/><path d="M0 68c15-21 30-21 45 0s30 21 45 0 22-19 32-6"/></g></svg>
+        <div class="logo-frame"><img src="assets/logo-iacra.png" alt="Logotipo original do Instituto Raphael Augusto"></div>
+        <div class="art-corner"><strong>Talentos que crescem</strong>Música que conecta e transforma</div>
+      </div>
+    </div>
+  </section>
+  <div class="container quick-nav" aria-label="Destaques do instituto"><div class="quick-inner">
+    <div class="quick"><div class="quick-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div><div><strong>Para diferentes idades e níveis</strong><span>Do primeiro contato à evolução contínua</span></div></div>
+    <div class="quick"><div class="quick-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 5v7m5-7v7m5-7v7M3 12h18"/></svg></div><div><strong>Ensino personalizado</strong><span>Técnica, acolhimento e acompanhamento</span></div></div>
+    <div class="quick"><div class="quick-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m9 8 7 4-7 4z"/></svg></div><div><strong>Plataforma IACRA</strong><span>Acesso exclusivo para a equipe</span></div></div>
+  </div></div>
+  <section class="section" id="cursos">
+    <div class="container">
+      <div class="section-head"><span class="overline">Nossos cursos</span><h2>Qual instrumento combina com você?</h2><p>Há diferentes formas de viver a música. Conheça as modalidades apresentadas pelo instituto e descubra qual delas combina com seus interesses. Para turmas e horários, consulte nossa equipe.</p></div>
+      <div class="filters" role="group" aria-label="Filtrar áreas de ensino">
+        <button class="filter active" type="button" data-filter="todos" aria-pressed="true">Todas as áreas</button>
+        <button class="filter" type="button" data-filter="voz" aria-pressed="false">Voz e grupos</button>
+        <button class="filter" type="button" data-filter="instrumentos" aria-pressed="false">Instrumentos</button>
+        <button class="filter" type="button" data-filter="infantil" aria-pressed="false">Infantil</button>
+      </div>
+      <div class="courses">
+        <article class="course" data-category="voz"><div class="glyph" aria-hidden="true">♬</div><h3>Preparação vocal</h3><p>Sua voz tem potencial. Desenvolva afinação, extensão vocal e expressão com aquecimento, respiração, apoio e técnica, respeitando sua voz.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♩</div><h3>Piano</h3><p>Um instrumento completo para desenvolver percepção musical, coordenação e conhecimento musical por meio das teclas.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♫</div><h3>Teclado</h3><p>Versátil para acompanhar músicas e também explorar diferentes timbres, sons e arranjos.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">𝄞</div><h3>Violão</h3><p>Presente em diferentes estilos musicais, é uma ótima opção para começar e aprender a acompanhar canções.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♬</div><h3>Guitarra</h3><p>Potência, expressividade e liberdade para explorar estilos, timbres, solos e ritmos.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♪</div><h3>Contrabaixo</h3><p>Ajuda a construir a base e a sustentação dos arranjos, conectando ritmo e harmonia.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♬</div><h3>Bateria</h3><p>Ritmo, coordenação e energia. A bateria tem papel fundamental na condução e na dinâmica da música.</p></article>
+        <article class="course" data-category="instrumentos"><div class="glyph" aria-hidden="true">♪</div><h3>Violino</h3><p>Um instrumento que desenvolve precisão, percepção musical e coordenação, com muitas possibilidades sonoras.</p></article>
+        <article class="course" data-category="infantil"><div class="glyph" aria-hidden="true">✦</div><h3>Musicalização infantil</h3><p>Um primeiro contato com a música que incentiva a escuta, o ritmo, a criatividade e a descoberta musical das crianças.</p></article>
+        <article class="course" data-category="voz"><div class="glyph" aria-hidden="true">♩</div><h3>Canto em grupo e coral</h3><p>Aprenda a ouvir outras vozes, construir harmonia e compartilhar a expressão musical em conjunto.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="vocal-highlight" aria-labelledby="voz-title">
+    <div class="container vocal-grid">
+      <div>
+        <span class="overline" style="color:#80d6ef">Preparação vocal</span>
+        <h2 id="voz-title">Sua voz tem potencial. <em>Ela merece preparo.</em></h2>
+        <p>Não é preciso cantar mais alto para cantar melhor, nem transformar as notas agudas em uma luta. Com orientação, é possível trabalhar a afinação, desenvolver a extensão vocal e aprimorar a maneira de cantar.</p>
+        <a class="vocal-cta" href="https://wa.me/5518997476987" target="_blank" rel="noopener noreferrer">Saiba mais sobre preparação vocal <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="vocal-features" aria-label="Aspectos trabalhados na preparação vocal">
+        <div><span class="vocal-no">01</span><div><strong>Afinação</strong><span>Uma habilidade que pode ser treinada e desenvolvida.</span></div></div>
+        <div><span class="vocal-no">02</span><div><strong>Respiração e apoio</strong><span>Fundamentos para usar a voz com mais consciência.</span></div></div>
+        <div><span class="vocal-no">03</span><div><strong>Técnica e acompanhamento</strong><span>Desenvolvimento vocal com orientação e atenção a cada pessoa.</span></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section about" id="instituto"><div class="container about-grid">
+    <div class="about-graphic">
+      <svg class="line-art" viewBox="0 0 460 260" fill="none" aria-hidden="true"><g stroke="#c3edf8" stroke-width="2"><path d="M-30 50Q90 0 220 60T495 55"/><path d="M-30 77Q90 27 220 87T495 82"/><path d="M-30 104Q90 54 220 114T495 109"/><path d="M-30 131Q90 81 220 141T495 136"/><path d="M-30 158Q90 108 220 168T495 163"/></g><path d="M295 48v110c-32-19-57 16-37 34 20 18 53-8 53-35V64l74-16v85c-31-20-58 14-39 33 21 18 54-8 54-37V18z" fill="#e0f5fc" opacity=".65"/></svg>
+      <blockquote>Mais do que ensinar música, formamos pessoas, desenvolvemos talentos e cultivamos propósitos.</blockquote>
+    </div>
+    <div class="about-copy"><span class="overline">O Instituto</span><h2>Um espaço para aprender, crescer e se expressar.</h2><p>Localizado em Presidente Prudente, o Instituto de Arte Cristã Raphael Augusto une educação musical, desenvolvimento humano e princípios cristãos. Nossa proposta é valorizar a individualidade de cada aluno, estimular talentos e oferecer oportunidades de aprendizado para diferentes idades e níveis.</p>
+      <p style="margin-top:14px">Com professores experientes, metodologia personalizada e um ambiente acolhedor, buscamos oferecer mais do que técnica: uma formação em que a música também seja expressão, comunhão e adoração a Deus.</p>
+      <div class="about-points">
+        <div class="about-point"><span class="point-check">✓</span><div><b>Professores qualificados</b><p>Acompanhamento e orientação durante o desenvolvimento musical.</p></div></div>
+        <div class="about-point"><span class="point-check">✓</span><div><b>Aprendizado no seu ritmo</b><p>Uma proposta de ensino que respeita diferentes etapas e objetivos.</p></div></div>
+        <div class="about-point"><span class="point-check">✓</span><div><b>Acolhimento e propósito</b><p>Um espaço de formação que valoriza as pessoas e sua expressão artística.</p></div></div>
+      </div>
+    </div>
+  </div></section>
+  <section class="section essence" id="essencia" aria-labelledby="essencia-title">
+    <div class="container">
+      <div class="essence-intro">
+        <span class="overline">Nossa essência</span>
+        <h2 id="essencia-title">Missão, visão e valores</h2>
+        <p>Mais do que ensinar música, formamos pessoas, desenvolvemos talentos e cultivamos propósitos.</p>
+      </div>
+      <div class="essence-cards">
+        <article class="essence-card"><span class="essence-kicker">01 · Missão</span><h3>Educar por meio da música</h3><p>Promover a educação musical e o desenvolvimento artístico e humano com ensino de qualidade, fundamentado em princípios cristãos, respeitando a individualidade e o potencial de cada aluno.</p></article>
+        <article class="essence-card"><span class="essence-kicker">02 · Visão</span><h3>Excelência que inspira</h3><p>Ser referência em educação musical, com excelência no ensino e formação integral, contribuindo para uma cultura musical construída com responsabilidade, sensibilidade e propósito.</p></article>
+        <article class="essence-card"><span class="essence-kicker">03 · Propósito</span><h3>Talentos com direção</h3><p>Acreditamos que cada talento pode ser desenvolvido. Por isso, incentivamos que o aprendizado se transforme em expressão, comunhão, serviço e propósito.</p></article>
+      </div>
+      <div class="values-card"><div><span class="overline" style="margin-bottom:10px">O que nos guia</span><h3>Valores que permanecem.</h3></div><ul class="values-list">
+        <li>Fé e princípios cristãos</li><li>Excelência no ensino</li><li>Respeito à individualidade</li><li>Desenvolvimento integral</li><li>Acolhimento e inclusão</li><li>Compromisso e responsabilidade</li><li>Criatividade e expressão artística</li><li>Comunhão e serviço</li><li>Aprendizado contínuo</li>
+      </ul></div>
+    </div>
+  </section>
+  <section class="feature-band"><div class="container feature-grid">
+    <div><span class="overline" style="color:#81d7ef">Como começar</span><h2>Seu próximo passo na música.</h2><p>Um caminho simples para conhecer as possibilidades de estudo. Os detalhes de inscrição e horários são combinados com a secretaria.</p></div>
+    <div class="steps"><div class="step"><b>01</b><strong>Conheça</strong><span>Explore as modalidades apresentadas no site.</span></div><div class="step"><b>02</b><strong>Converse</strong><span>Entre em contato com a equipe para tirar dúvidas.</span></div><div class="step"><b>03</b><strong>Participe</strong><span>Confira as opções de turma, horário e matrícula.</span></div></div>
+  </div></section>
+  <section class="contact" id="contato"><div class="container">
+    <div class="contact-box">
+      <div><span class="overline">Fale com o Instituto</span><h2>Estamos aqui para conversar.</h2><p>Conheça nossos canais oficiais, tire dúvidas sobre cursos e horários ou saiba como chegar até o Instituto.</p></div>
+      <div class="contact-side"><span class="future">Escolha o atendimento mais adequado para sua necessidade.</span></div>
+    </div>
+    <div class="contact-grid" aria-label="Canais oficiais do instituto">
+      <article class="contact-card">
+        <div class="contact-card-top"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8A8.5 8.5 0 0 1 12.5 20a8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 9.5c.4 2.3 2.2 4.1 4.5 4.5l1.5-1 2 1-1 2c-4.7 1.6-9.4-3.1-7.8-7.8l2-1 1 2z"/></svg></span><h3>WhatsApp · Acolhimento</h3></div>
+        <p class="contact-value">(18) 99747-6987</p>
+        <p class="contact-details">Informações iniciais e acolhimento.</p>
+        <a class="contact-link" href="https://wa.me/5518997476987" target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Acolhimento">Conversar com o Acolhimento ↗</a>
+      </article>
+      <article class="contact-card">
+        <div class="contact-card-top"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8A8.5 8.5 0 0 1 12.5 20a8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8A8.5 8.5 0 0 1 8.7 3.9a8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><path d="M9 9.5c.4 2.3 2.2 4.1 4.5 4.5l1.5-1 2 1-1 2c-4.7 1.6-9.4-3.1-7.8-7.8l2-1 1 2z"/></svg></span><h3>WhatsApp · Administrativo</h3></div>
+        <p class="contact-value">(18) 99707-4048</p>
+        <p class="contact-details">Fale com o setor administrativo.</p>
+        <a class="contact-link" href="https://wa.me/5518997074048" target="_blank" rel="noopener noreferrer" aria-label="Conversar com o Administrativo">Conversar com o Administrativo ↗</a>
+      </article>
+      <article class="contact-card">
+        <div class="contact-card-top"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg></span><h3>Endereço</h3></div>
+        <p class="contact-value">Rua Joaquim Nabuco, 1040</p>
+        <p class="contact-details">Vila Nova · Presidente Prudente/SP · CEP 19010-072</p>
+        <a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Rua%20Joaquim%20Nabuco%2C%201040%20-%20Vila%20Nova%2C%20Presidente%20Prudente%20-%20SP%2C%2019010-072%2C%20Brasil" target="_blank" rel="noopener noreferrer" aria-label="Ver localização no Google Maps">Ver localização no Google Maps ↗</a>
+      </article>
+      <article class="contact-card">
+        <div class="contact-card-top"><span class="contact-card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.7 6.3h.01"/></svg></span><h3>Instagram</h3></div>
+        <p class="contact-value">@institutodeartecristara</p>
+        <p class="contact-details">Acompanhe novidades e atividades do instituto.</p>
+        <a class="contact-link" href="https://www.instagram.com/institutodeartecristara/" target="_blank" rel="noopener noreferrer" aria-label="Abrir perfil do Instagram">Abrir perfil do Instagram ↗</a>
+      </article>
+    </div>
+  </div></section>
+  <section class="faq"><div class="container faq-inner"><h2>Dúvidas frequentes</h2>
+    <details><summary>Como posso saber quais cursos estão disponíveis?</summary><p>Entre em contato com a secretaria do instituto para confirmar modalidades, turmas e horários. O WhatsApp de Acolhimento e o Administrativo estão disponíveis na seção de contato.</p></details>
+    <details><summary>O instituto oferece atividades em grupo?</summary><p>O modelo apresenta opções de atividades individuais e em grupo. A disponibilidade de cada modalidade deve ser confirmada diretamente com o instituto.</p></details>
+    <details><summary>Quem pode acessar a plataforma IACRA?</summary><p>O acesso à plataforma é exclusivo para a equipe autorizada do instituto. O botão “Área da equipe” no topo deste modelo leva ao endereço atual do sistema.</p></details>
+  </div></section>
+</main>
+<footer class="footer"><div class="container">
+  <div class="footer-grid"><div><div class="footer-logo"><img src="assets/logo-iacra.png" alt="Instituto Raphael Augusto"></div><p>Instituto de Arte Cristã Raphael Augusto. Educação musical com excelência, fé e propósito.</p></div><nav class="footer-links" aria-label="Links do rodapé"><a href="#inicio">Início</a><a href="#cursos">Áreas de ensino</a><a href="#instituto">Sobre o Instituto</a><a href="#essencia">Nossa essência</a><a href="#contato">Contato</a><a href="https://institutoiacra.com.br/" target="_blank" rel="noopener noreferrer">Área da equipe ↗</a></nav></div>
+  <div class="copyright"><span>© 2026 Instituto de Arte Cristã Raphael Augusto</span><span>Desenvolvido por <a href="https://hostware.com.br/" target="_blank" rel="noopener noreferrer" aria-label="Visitar o site da Hostware Tecnologia e Soluções Digitais">Hostware Tecnologia e Soluções Digitais</a></span></div>
+  <p class="notice">Este é um modelo demonstrativo. Textos, modalidades, contato e destino definitivo da plataforma devem ser confirmados antes da publicação. O site oficial e o banco de dados não foram alterados.</p>
+</div></footer>
+<script>
+(function(){
+const menu=document.getElementById('menu'),toggle=document.getElementById('menu-button');
+toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Fechar menu':'Abrir menu')});
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+const buttons=[...document.querySelectorAll('[data-filter]')],items=[...document.querySelectorAll('.course')];
+buttons.forEach(button=>button.addEventListener('click',()=>{
+ buttons.forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});
+ items.forEach(item=>item.classList.toggle('hide',button.dataset.filter!=='todos'&&button.dataset.filter!==item.dataset.category));
+}));
+})();
+</script>
+</body></html>
